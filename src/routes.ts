@@ -1,29 +1,10 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "./pages/Home.vue";
-import QuizPage from "./pages/QuizPage.vue";
-import QuizList from "./pages/QuizList.vue";
-import RulesPage from "./pages/RulesPage.vue";
-import RandomWheel from "./pages/RandomWheel.vue";
+import QuizPageVue from "./pages/QuizPage.vue";
+import AdminVue from "./pages/Admin.vue";
 
 const routes = [
-  { path: "/", component: Home },
-  {
-    path: "/rules",
-    component: RulesPage,
-  },
-  {
-    path: "/random_wheel",
-    component: RandomWheel,
-  },
-  {
-    path: "/quiz_list",
-    component: QuizList,
-  },
-  {
-    path: "/quiz/:id",
-    component: QuizPage,
-    props: true,
-  },
+  { path: "/", component: QuizPageVue },
+  { path: "/admin", component: AdminVue },
 ];
 
 export const router = createRouter({
